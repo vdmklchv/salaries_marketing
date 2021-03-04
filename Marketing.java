@@ -2,14 +2,13 @@ import java.util.Scanner;
 
 public class Marketing {
     public static void main(String[] args) {
-        Person artem = createPerson();
-        Person jenya = createPerson();
-        Person inna = createPerson();
+        Person person1 = createPerson();
+        Person person2 = createPerson();
+        Person person3 = createPerson();
 
-        // System.out.println("Here are the salaries per project:");
-        artem.printSalaries();
-        jenya.printSalaries();
-        inna.printSalaries();
+        person1.printSalaries();
+        person2.printSalaries();
+        person3.printSalaries();
     }
 
     public static Person createPerson() {
@@ -21,19 +20,19 @@ public class Marketing {
         String name = scanner.nextLine();
 
         System.out.print("Salary? ");
-        int salary = Integer.valueOf(scanner.nextLine());
+        int salary = Integer.parseInt(scanner.nextLine());
 
         System.out.print("Hosting hours? ");
-        int hostingHours = Integer.valueOf(scanner.nextLine());
+        int hostingHours = Integer.parseInt(scanner.nextLine());
 
         System.out.print("Subscription Hours? ");
-        int subsHours = Integer.valueOf(scanner.nextLine());
+        int subsHours = Integer.parseInt(scanner.nextLine());
 
         System.out.print("Holding hours? ");
-        int holdingHours = Integer.valueOf(scanner.nextLine());
+        int holdingHours = Integer.parseInt(scanner.nextLine());
 
         System.out.print("Percentage on iOS? ");
-        double iOSRate = Double.valueOf(scanner.nextLine());
+        double iOSRate = Double.parseDouble(scanner.nextLine());
 
         return new Person(name, salary, hostingHours, subsHours, holdingHours, iOSRate);
     }

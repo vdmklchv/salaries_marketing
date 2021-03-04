@@ -1,9 +1,7 @@
-import java.util.Scanner;
 import java.text.DecimalFormat;
 
 public class Person {
     DecimalFormat df = new DecimalFormat("0.00");
-    Scanner scanner = new Scanner(System.in);
 
     private String name;
 
@@ -41,13 +39,13 @@ public class Person {
     }
 
     public void printSalaries() {
-        System.out.println("");
+        System.out.println();
         System.out.println(this.name + ":");
         System.out.println("-------------");
         System.out.println("Hosting: " + df.format(this.calcPayingRate() * this.hostingHours));
         System.out.println("Subs Web: " + df.format(this.calcPayingRate() * this.calcWebHours()));
         System.out.println("Subs iOS: " + df.format(this.calcPayingRate() * this.calcIOSHours()));
         System.out.println("-------------");
-        System.out.println("");
+        System.out.println();
     }
 }
